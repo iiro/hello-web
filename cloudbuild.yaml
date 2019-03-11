@@ -7,7 +7,7 @@
       args: ['push', 'gcr.io/$PROJECT_ID/$_SERVICE']
     # Deploy container image to Cloud Run
     - name: 'gcr.io/cloud-builders/gcloud'
-      args: ['alpha', 'run', 'deploy', '$_SERVICE', '--image', 'gcr.io/$PROJECT_ID/$_SERVICE', '--region', '$_REGION']
+      args: ['alpha', 'run', 'deploy', '$_SERVICE', '--image', 'gcr.io/$PROJECT_ID/$_SERVICE', '--region', '${_REGION}']
     images: ['gcr.io/$PROJECT_ID/$_SERVICE']
     substitutions:
     _SERVICE: hello-web # service name
